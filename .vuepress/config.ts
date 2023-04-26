@@ -6,6 +6,7 @@ export default defineUserConfig({
   title: "vuepress-theme-reco",
   description: "Just playing around",
   dest: 'docs',
+  base: '/myblog/',
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
     logo: "/logo.png",
