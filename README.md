@@ -3,16 +3,16 @@ home: true
 modules:
   - BannerBrand
   - Blog
-  - MdContent
+  # - MdContent
   - Footer
 bannerBrand:
   bgImage: '/bg.svg'
-  title: vuepress-reco
-  description: 一款简洁的 vuepress 博客 & 文档 主题。
-  tagline: vuepress-theme-reco 2.0 继续坚持简洁的风格，所有功能开箱即用，首页模块化组装，使用 tailwindcss 书写样式，将 Vite 作为默认编译器。你只需要负责内容创作，其他请交给我。
+  title: 相遇小站
+  description: 倾听、感受、思考。
+  tagline: 学而不思则罔，高校输入和有效输出是转化知识的策略，从笔记到文章，尽归于此。
   buttons:
-    - { text: Guide, link: '/docs/guide/introduce' }
-    - { text: Default Style, link: '/docs/style-default-api/introduce', type: 'plain' }
+    - { text: 笔记, link: '/myblog/categories/notes/1/' }
+    # - { text: Default Style, link: '/docs1/style-default-api/introduce', type: 'plain' }
   socialLinks:
     - { icon: 'LogoGithub', link: 'https://github.com/vuepress-reco/vuepress-theme-reco' }
 blog:

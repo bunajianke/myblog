@@ -6,7 +6,7 @@
   "author": "yuehuajun<socn_1@163.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev .",
+    "dev": "vuepress dev . --temp .vuepress/.temp",
     "start": "vuepress dev .",
     "build": "vuepress build ."
   },
