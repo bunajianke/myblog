@@ -1,5 +1,8 @@
 ---
-title: 手写读懂 call 方法
+title: 手写读懂 call 和 apply 方法
+date: 2023/5/8
+categories:
+  - 前端
 tags:
   - JavaScript
 ---
@@ -14,11 +17,12 @@ const Person = {
   name: 'xiaoming'
 }
 
-function sayName() {
+function sayName(age) {
+  console.log(age)
   return this.name
 }
 
-sayName.call(Person) // Expected output: xiaoming
+sayName.call(Person, 18) // Expected output: 18, xiaoming
 ```
 
 ### 有参数依次传入：
@@ -88,5 +92,23 @@ Function.prototype.myCall = function(context = window) {
 }
 ```
 ### 实现解释
-1. 在修改this指向时判断，如果context是null或undefined，this就指向window。
-2. 在创建fn属性时可能在context上本身就有一个fn，所以使用Symbol()来保证用的是唯一值
+1. 在修改 `this` 指向时判断，如果 `context` 是 `null` 或 `undefined`，`this` 就指向 `window`。
+2. 在创建 `fn` 属性时可能在 `context` 上本身就有一个 `fn`，所以使用 `Symbol()` 来保证用的是唯一值。
+
+## apply 的使用方法
+和 `call` 方法类似，不过传递的参数变成数组形式。
+
+```js
+sayName.apply(Person, [18]);
+```
+
+实现：
+```js
+Function.prototype.myApply = function (context, argArr) {
+  const fn = Symbol();
+  context[fn] = this;
+  const result = context[fn](argArr);
+  delete context[fn];
+  return result;
+};
+```

@@ -9,7 +9,7 @@ bannerBrand:
   bgImage: '/bg.svg'
   title: 相遇小站
   description: 倾听、感受、思考。
-  tagline: 学而不思则罔，高校输入和有效输出是转化知识的策略，从笔记到文章，尽归于此。
+  tagline: 学而不思则罔，高效输入和有效输出是转化知识的策略，从笔记到文章，尽归于此。
   buttons:
     - { text: 笔记, link: '/myblog/categories/notes/1/' }
     # - { text: Default Style, link: '/docs1/style-default-api/introduce', type: 'plain' }
